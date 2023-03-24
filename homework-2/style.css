@@ -1,0 +1,61 @@
+body{
+    width:600px;
+}
+h1, h2{
+    color: orange;
+}
+h1{
+    text-align: right;
+}
+.text1::first-letter{
+    color:red;
+    font-size: 30px;
+}
+p{
+    line-height:16px;
+}
+p::first-line{
+    line-height:25px;
+}
+h2:last-of-type{
+    color: blue;
+}
+.text2::first-letter{
+    color:red;
+    font-size: 30px;
+}
+mark{
+    font-style: italic;
+    color: white;
+    background-color: green;
+}
+.name{
+    font-weight:700;
+}
+.list1{
+    color: grey;
+}
+ol:nth-child(4){
+    color:red;
+}
+.list3{
+    color: green
+}
+ol{
+    line-height:15px;
+}
+table,tr,th,td{
+    border: 1px solid black;
+    width:400px;  
+}
+td{
+    color:white;
+    background-color: green;
+}
+td:first-child{
+    color:orange;
+    background-color: white;
+}
+td:not(:first-child){
+    text-align:center;
+}
