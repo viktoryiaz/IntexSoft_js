@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Создать свой метод/чистую функцию аналогичную Array.every
+
+let array = [-5, 2, 17, 5]
+let arrayCheck = Array.isArray(array);
+let arrayLength = array.length;
+
+
+if(arrayCheck == true && arrayLength == 0){
+  console.log("This is an empty array!");
+} else if(arrayCheck == true && arrayLength > 0) {
+    Array.prototype.likeEvery = function (arg) {
+      for (let i = 0; i < arrayLength; i++) {   //for (let i = 0; i < this.length; i++) {
+        if (!arg(array[i], i, array)) {        // if(!arg(this[i], i, this)) {
+           return false;
+        }
+      }
+      return true;
+    };
+    let result = array.likeEvery(function (element, index, arr) {
+      return element > 0;
+    })
+  
+  console.log(result);
+
+} else {
+  console.log("This is not an array!");
+}
+    </script>
+    
+</body>
+</html>
